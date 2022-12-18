@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+header {
+  background: #42C8FB;
+  padding: 20px 50px;
+  color: #fff;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.flex1 {
+  padding: 10px auto;
+}
+.flex1 h1{
+  margin: 15px 0;
+}
+.flex1 p {
+  text-align: left;
+  margin: 10px 0;
+}
+form input, form select, 
+form button {
+  background: #fff;
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #808080;
+}
+form button{
+  border: 0;
+  background: #808080;
+}
+form button:focus, 
+form input:focus,
+form select:focus {
+  outline: none;
+}
+#generated {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+#spinner {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  display: inline;
+  color: #808080;
+  width: 100px;
+  height: 100px;
+  fill: #42C8FB;
+  animation: spin .3s linear infinite;
+}
+
+.sr-only {
+  margin: 20px auto;
+}
+.btn {
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background: #42C8FB;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.btn:hover {
+  background: #808080;
+}
+
+
+@media(max-width:500px) {
+  .flex {
+    flex-direction: column-reverse;
+    max-width: 300px;
+  }
+  .sm {
+    display: none;
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(60deg);
+  }
+  20% {
+    transform: rotate(120deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(240deg);
+  }
+  80% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
